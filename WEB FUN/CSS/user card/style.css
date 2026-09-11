@@ -1,0 +1,56 @@
+.nav {
+    background-color: rgb(11, 155, 155);
+    height: 100px;
+}
+
+.container {
+    margin-left: 120px;
+    margin-top: -50px;
+}
+
+img {
+    height: 15px;
+    
+}
+
+.edit {
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.div img {
+    margin-right: 20px;
+}
+.bashar {
+    height: 150px;
+    display: flex;
+    position: relative;
+    bottom: 50px;
+    left: 50px;
+    border-radius: 100%;
+}
+
+.box {
+    margin-top: 50px;
+    justify-content: center;
+    width: 1024px;
+    height: 500px;
+    border-style: solid;
+    border-color: grey;
+}
+
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    margin-right: 10px;
+}
+
+label{
+    font-size: 20px;
+}

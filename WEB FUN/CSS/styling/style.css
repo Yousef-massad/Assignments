@@ -1,0 +1,21 @@
+h1 {
+    background-color: black;
+    color: skyblue;
+    
+}
+
+h2 {background-color: blueviolet;
+    color: beige;
+    font-style: italic;
+    text-align: center;
+}
+
+span{
+    color: aliceblue;
+}
+
+div{text-align: right;
+    background-color: skyblue;
+
+
+}

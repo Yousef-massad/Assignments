@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form>
+    <div  style="margin-bottom: 10px;">
+        <label for="name">First Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div  style="margin-bottom: 10px;">
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname">
+    </div> 
+    <div  style="margin-bottom: 10px;">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email"> 
+    </div>
+    <div  style="margin-bottom: 10px;">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"> 
+    </div>
+    <div  style="margin-bottom: 10px;">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password">   
+    </div>
+    <div  style="margin-bottom: 10px;">
+        <label for="birth-date">Birth Date:</label>
+        <input type="date" id="birth-date" name="birth-date">
+    </div>
+
+    <div style="margin-bottom: 10px;">
+    <label>Gender Identity:</label>
+</div>
+
+    <div style="margin-bottom: 10px;">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>  
+    
+    
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    
+    
+        <input type="radio" id="Non binary" name="gender" value="other">
+        <label for="Non binary">non binary</label>  
+        
+        <input type="radio" id="I prefer not to answer" name="gender" value="other">
+        <label for="I prefer not to answer">I prefer not to answer </label>
+    </div>
+    
+<div style="margin-bottom: 10px;">
+    <label for="description">A short description about myself:</label>
+</div>
+
+<div style="margin-bottom: 10px;">
+    <textarea id="description" name="description" rows="4" cols="50"></textarea>
+</div>
+
+<div style="margin-bottom: 10px;">
+
+    <label for="country">Favorite language:</label>
+    
+    <select id="country" name="country">
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+    </select>
+
+</div>
+
+<div style="margin-bottom: 10px;">
+    <input type="checkbox" id="terms" name="terms">
+    <label for="terms">Yes i would like to receive periodic email updates:</label>
+</div> 
+
+<div style="margin-bottom: 10px;">
+<input type="submit" value="Create Account">
+</div>
+
+<p>* Indicates required fields</p>
+    </form>
+
+</body>
+</html>
