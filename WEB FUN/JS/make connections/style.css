@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.nav {
+    background-color: #333333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+.nav-title {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a.active {
+    color: white;
+    font-weight: bold;
+}
+
+.btn-signout {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 3px solid black;
+    box-shadow: 3px 3px black;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.column-left {
+    flex: 2;
+}
+
+.column-right {
+    flex: 1;
+}
+
+.card {
+    background-color: white;
+    border: 2px solid #cccccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #17a2b8;
+    height: 90px;
+}
+
+.card-header-text {
+    background-color: #333333;
+    color: white;
+    padding: 12px 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-body {
+    padding: 20px;
+    position: relative;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    border: 3px solid white;
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    width: 90px;
+    height: 90px;
+    background-color: #eee;
+}
+
+.user-card .card-body {
+    padding-top: 50px;
+}
+
+.user-card h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.location {
+    color: #666;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bio {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.edit-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.edit-link a {
+    color: #0056b3;
+    font-size: 14px;
+}
+
+.icon-small {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.education-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.sub-text {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.badge {
+    background-color: #999999;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.item-list {
+    list-style: none;
+    padding: 10px 15px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.card-footer {
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+}
+
+.card-footer a {
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 14px;
+}
