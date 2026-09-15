@@ -1,5 +1,6 @@
 .main{
     width: 40%;
+    
 }
 
 body{
@@ -26,6 +27,7 @@ header{
 .container{
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
 
 aside{
