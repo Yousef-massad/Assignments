@@ -1,0 +1,24 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    margin: 0 auto;
+}
+
+.box-container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(159 197 248);
+    border: 2px solid black;
+}
