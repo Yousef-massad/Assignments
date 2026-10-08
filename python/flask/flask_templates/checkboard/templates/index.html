@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckBoard</title>
+</head>
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+<body>
+    {% for i in range(boxnum) %}
+    {% if bg == "red" %}
+    <div class="box" style="background-color: red;"></div>
+    {% set bg = "black" %}
+    {% endif %}
+    {% else %}
+    <div class="box" style="background-color: black;"></div>
+{% set bg = "red" %}
+
+{% endfor %}
+</body>
+</html>
