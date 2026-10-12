@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #e0e0e0;
+}
+
+img {
+    width: 25px;
+    vertical-align: middle;
+}

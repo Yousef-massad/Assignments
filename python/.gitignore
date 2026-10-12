@@ -2,3 +2,11 @@ _python/
 data structure/
 django/
 my_environments/
+
+# المجلدات المستثناة الجديدة
+_python/
+data structure/
+my_enviroments/
+django/
+*.sqlite3
+.DS_Store

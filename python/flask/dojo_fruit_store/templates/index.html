@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dojo Fruit Store</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Dojo Fruit Store!</h1>
+    
+    <form action="/checkout" method="post">
+        <h3>What would you like to buy?</h3>
+        <table>
+            <tr>
+                <th>Fruit Name</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td><img src="{{ url_for('static', filename='img/strawberry.png') }}" alt="Strawberry"> Strawberry</td>
+                <td>
+                    <select name="strawberry">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{{ url_for('static', filename='img/raspberry.png') }}" alt="Raspberry"> Raspberry</td>
+                <td>
+                    <select name="raspberry">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{{ url_for('static', filename='img/apple.png') }}" alt="Apple"> Apple</td>
+                <td>
+                    <select name="apple">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <h3>Your Information</h3>
+        <label>First Name: <input type="text" name="first_name"></label><br><br>
+        <label>Last Name: <input type="text" name="last_name"></label><br><br>
+        <label>Student ID: <input type="text" name="student_id"></label><br><br>
+
+        <input type="submit" value="Buy me stuff!">
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <link rel="stylesheet" href="{% static 'surveyapp/result.css' %}">
+</head>
+<body>
+    <div class="container">
+
+        <h1>submitted info </h1>
+        <p>Name: {{name_on_template}} </p>
+        <p>location: {{location_on_template}} </p>
+        <p>language: {{language_on_template}} </p>
+        <p>comment: {{comment_on_template}} </p>
+        
+        <a href="/"><button class="btn">Go back</button></a>
+    </div>
+</body>
+</html>
