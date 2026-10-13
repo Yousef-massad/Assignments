@@ -21,3 +21,15 @@ def result(request):
     print(context['comment_on_template'])
     
     return render(request,'result.html',context)
+
+def login(request):
+    username = request.POST["username"]
+    password = request.POST["password"]
+    
+    context2 = {
+        'name_on_template' : username,
+        'key_on_template' : password,
+    }
+    
+    return render(request,'login.html',context2)
+        

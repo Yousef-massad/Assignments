@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="box">
+        <h1>Welcome to the great number game!</h1>
+        <p>I am thinking of a number between 1 and 100</p>
+        <p>take a guess!</p>
+
+        {% if request.session.game_status == "too_high" %}
+        <div class="result-box too_high ">
+            Too high!
+        </div>
+
+        {% elif request.session.game_status == "too_low" %}
+        <div class="result-box too_low ">
+            Too low!
+        </div>
+
+        {% elif request.session.game_status == "correct" %}
+        <div class="result-box correct ">
+            {{request.session.number}} was the number!
+            <br></br>
+            <form action="/reset" method="post">
+                {% csrf_token %}
+                <button type="submit">play again!</button>
+            </form>
+        </div>
+        {% endif %}
+
+        {% if request.session.game_status != 'correct' %}
+            <form action="/guess" method="POST">
+                {% csrf_token %}
+                <input type="number" name="guess" min="1" max="100" required>
+                <br><br>
+                <button type="submit">Submit Guess</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>

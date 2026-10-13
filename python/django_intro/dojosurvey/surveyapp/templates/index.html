@@ -34,9 +34,21 @@
                 <select name="language" id="favorite language" ><option value="python">python</option></select>
             </div>
             
+            
            
         </form>
     </div>
+
+    <form action="login/" method="post">
+                {% csrf_token %}
+                <label for="username">username</label>
+                <input type="text" name="username" id="username">
+
+                <label for="password">password</label>
+                <input type="text" name="password" id="password">
+
+                <button type="submit" value="login">login</button>
+            </form>
 </body>
 </html>
  
