@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+</head>
+<body>
+    <div class="box">
+        <h1>Counter Application</h1>
+        
+        
+        <p>You have visited this site <strong>{{ request.session.visits }}</strong> time(s).</p>
+        <p>Current Counter Value: <strong>{{ request.session.count }}</strong></p>
+
+        
+        <form action="/increment_two" method="POST">
+            {% csrf_token %}
+            <button type="submit">+2 Counter</button>
+        </form>
+
+        
+        <form action="/destroy_session" method="POST">
+            {% csrf_token %}
+            <button type="submit" style="background-color: #ffcccc;">Reset / Clear Session</button>
+        </form>
+
+        
+        <form action="/custom_increment" method="POST">
+            {% csrf_token %}
+            <label for="increment_value">Increment by:</label>
+            <input type="number" name="increment_value" value="1" min="1" style="width: 50px;">
+            <button type="submit">Apply Custom Increment</button>
+        </form>
+    </div>
+</body>
+</html>
