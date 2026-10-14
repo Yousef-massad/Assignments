@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 30px;
+}
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+.header-box {
+    border: 2px solid #333;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 25px;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.locations-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+.location-card {
+    border: 2px solid #666;
+    padding: 15px;
+    width: 160px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+.activities-box {
+    border: 2px solid #333;
+    height: 180px;
+    overflow-y: scroll;
+    text-align: left;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+.win { color: green; }
+.loss { color: red; }
+button {
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.reset-btn {
+    background-color: #dc3545;
+    margin-top: 20px;
+}
+.reset-btn:hover {
+    background-color: #bd2130;
+}
