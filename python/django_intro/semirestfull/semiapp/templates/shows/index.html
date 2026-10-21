@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shows</title>
+  </head>
+  <body>
+    <h1>All shows</h1>
+    <table>
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>Title</td>
+          <td>Network</td>
+          <td>Release Date</td>
+          <td>Actions</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for show in all_shows %}
+        <tr>
+            <td>{{ show.id }}</td>
+            <td>{{ show.title }}</td>
+            <td>{{ show.network }}</td>
+            <td>{{ show.release_date }}</td>
+            <td>
+                <a href="/shows/{{ show.id }}">Show</a> | 
+                <a href="/shows/{{ show.id }}/edit">Edit</a> | 
+                <form action="/shows/{{ show.id }}/destroy" method="POST" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>    
+
+    <a href="/shows/new">Add a New Show</a>
+
+  </body>
+</html>
