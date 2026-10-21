@@ -27,6 +27,15 @@
       </p>
       <button type="submit">Update</button>
     </form>
+
+    {% if messages %}
+    <ul>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
     <a href="/shows/{{ show.id }}">Go to Show</a>
   </body>
 </html>

@@ -15,6 +15,15 @@
       <label for="description">Description: <input name="description" id="description"/></label>
       <button type="submit">Create</button>
     </form>
+
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
     <a href="/shows">Go Back</a>
   </body>
 </html>
