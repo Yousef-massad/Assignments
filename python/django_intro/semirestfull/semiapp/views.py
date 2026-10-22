@@ -44,7 +44,16 @@ def edit_show(request, show_id):
 
 def update_show(request,show_id):
     if request.method == 'POST':
+        
+        errors = Show.objects.show_validations(request.POST)
+        
         show = Show.objects.get(id=show_id)
+        
+        if errors:
+            for key,value in errors.items():
+                messages.error(request,value)
+                return redirect(f'/shows/{ show.id }/update')
+        
         show.title = request.POST['title']
         show.network = request.POST['network']
         show.release_date = request.POST['release_date']

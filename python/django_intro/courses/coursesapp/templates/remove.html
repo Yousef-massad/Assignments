@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove</title>
+</head>
+<body>
+    <h1>Are you sure you want to Delete this course?</h1>
+    <p>Name: {{ course.name }}</p>
+    <p>Description: {{ course.description }}</p>
+
+    <form action="/">
+        {% csrf_token %}
+        <button type="submit">No</button>
+    </form>
+
+    <form action="/destroy/{{ course.id }}">
+        {% csrf_token %}
+        <button type="submit">Yes</button>
+    </form>
+</body>
+</html>
