@@ -65,19 +65,37 @@ public class Order {
     // GET ORDER TOTAL
     public double getOrderTotal() {
         double total = 0;
-
+        
         for (Item item : items) {
             total += item.getPrice();
+        
         }
 
         return total;
     }
+
+    public double getMaxPrice() {
+    if (items.isEmpty()) {
+        return 0.0;
+    }
+
+    double maxPrice = items.get(0).getPrice();
+
+    for (Item item : items) {
+        if (item.getPrice() > maxPrice) {
+            maxPrice = item.getPrice();
+        }
+    }
+
+    return maxPrice;
+}
 
     // DISPLAY ORDER INFORMATION
     public void display() {
         System.out.println("Customer Name: " + name);
 
         for (Item item : items) {
+
             System.out.println(
                 item.getName() + " - $" +
                 String.format("%.2f", item.getPrice())
@@ -85,5 +103,7 @@ public class Order {
         }
 
         System.out.printf("Total: $%.2f%n", getOrderTotal());
+        System.out.printf("Max: $%.2f%n", getMaxPrice());
+
     }
 }
